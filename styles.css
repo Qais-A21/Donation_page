@@ -213,24 +213,6 @@ main {
 .copy-btn:hover { background: #163a9e; }
 .copy-btn.copied { background: #1e8f4e; }
 
-.copy-all-btn {
-  display: block;
-  width: 100%;
-  margin-top: 22px;
-  background: var(--yellow);
-  color: var(--ink);
-  border: 2px solid var(--navy);
-  border-radius: 12px;
-  padding: 14px 18px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.1s ease, background 0.15s ease;
-}
-
-.copy-all-btn:hover { transform: translateY(-2px); }
-.copy-all-btn.copied { background: #a8f0c0; }
-
 /* ---------- Supplies strip ---------- */
 .supplies-strip {
   display: flex;
@@ -289,7 +271,11 @@ footer strong { color: var(--yellow); }
     gap: 14px;
     margin: 0 0 20px;
   }
-  .floating-icon {
+  .floating-icon,
+  .floating-icon.bag,
+  .floating-icon.pencil,
+  .floating-icon.notebook,
+  .floating-icon.eraser {
     position: static;
     width: 40px;
     height: 40px;
@@ -305,7 +291,15 @@ footer strong { color: var(--yellow); }
   header.site-header p { font-size: 0.8rem; }
   .hero h2 { font-size: 1.6rem; }
   .hero .badge { font-size: 0.85rem; padding: 8px 16px; }
-  .floating-icon { width: 34px; height: 34px; padding: 6px; }
+  .floating-icon,
+  .floating-icon.bag,
+  .floating-icon.pencil,
+  .floating-icon.notebook,
+  .floating-icon.eraser {
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+  }
   .card h3 { font-size: 1.2rem; }
   .field-row { flex-direction: column; align-items: stretch; gap: 8px; }
   .copy-btn { width: 100%; padding: 8px; }
@@ -316,5 +310,13 @@ footer strong { color: var(--yellow); }
 @media (max-width: 380px) {
   .hero h2 { font-size: 1.4rem; }
   .hero-icons { gap: 8px; }
-  .floating-icon { width: 30px; height: 30px; padding: 5px; }
+  .floating-icon,
+  .floating-icon.bag,
+  .floating-icon.pencil,
+  .floating-icon.notebook,
+  .floating-icon.eraser {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
 }

@@ -33,17 +33,3 @@ document.querySelectorAll(".copy-btn").forEach((btn) => {
     flashCopied(btn, "Copy");
   });
 });
-
-const copyAllBtn = document.getElementById("copyAllBtn");
-if (copyAllBtn) {
-  copyAllBtn.addEventListener("click", async () => {
-    const lines = [];
-    document.querySelectorAll(".bank-field").forEach((field) => {
-      const label = field.querySelector("label").textContent;
-      const value = field.querySelector(".value").dataset.copy;
-      lines.push(`${label}: ${value}`);
-    });
-    await copyText(lines.join("\n"));
-    flashCopied(copyAllBtn, "📋 Copy All Details");
-  });
-}
