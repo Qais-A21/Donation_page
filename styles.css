@@ -185,20 +185,49 @@ main {
   font-size: 1.05rem;
   font-weight: 600;
   word-break: break-word;
+  flex: 1;
+  min-width: 0;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .copy-btn {
-  margin-top: 6px;
-  font-size: 0.75rem;
+  flex-shrink: 0;
+  font-size: 0.78rem;
   background: var(--navy);
   color: var(--cream);
   border: none;
   border-radius: 6px;
-  padding: 4px 10px;
+  padding: 6px 12px;
   cursor: pointer;
+  transition: background 0.15s ease;
 }
 
 .copy-btn:hover { background: #163a9e; }
+.copy-btn.copied { background: #1e8f4e; }
+
+.copy-all-btn {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  background: var(--yellow);
+  color: var(--ink);
+  border: 2px solid var(--navy);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.15s ease;
+}
+
+.copy-all-btn:hover { transform: translateY(-2px); }
+.copy-all-btn.copied { background: #a8f0c0; }
 
 /* ---------- Supplies strip ---------- */
 .supplies-strip {
@@ -241,9 +270,35 @@ footer {
 
 footer strong { color: var(--yellow); }
 
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  main { margin-top: -28px; padding: 0 14px 50px; }
+  .card { padding: 24px 18px; }
+  .bank-grid { grid-template-columns: 1fr; gap: 14px; }
+  .hero { padding: 56px 16px 72px; }
+  .hero h2 { font-size: 1.9rem; }
+  .hero p.lead { font-size: 1rem; }
+  .supplies-strip { gap: 16px; }
+}
+
 @media (max-width: 560px) {
-  .bank-grid { grid-template-columns: 1fr; }
-  .hero h2 { font-size: 1.7rem; }
-  .floating-icon { width: 46px; height: 46px; }
-  .floating-icon.notebook, .floating-icon.bag { width: 50px; height: 50px; }
+  header.site-header { padding: 14px 16px; gap: 12px; }
+  header.site-header img.logo { height: 48px; width: 48px; }
+  header.site-header h1 { font-size: 1.15rem; }
+  header.site-header p { font-size: 0.8rem; }
+  .hero h2 { font-size: 1.6rem; }
+  .hero .badge { font-size: 0.85rem; padding: 8px 16px; }
+  .floating-icon { width: 44px; height: 44px; padding: 7px; }
+  .floating-icon.notebook, .floating-icon.bag { width: 48px; height: 48px; }
+  .floating-icon.ruler { display: none; }
+  .card h3 { font-size: 1.2rem; }
+  .field-row { flex-direction: column; align-items: stretch; gap: 8px; }
+  .copy-btn { width: 100%; padding: 8px; }
+  .supplies-strip img { width: 46px; height: 46px; }
+  .supplies-strip figcaption { font-size: 0.72rem; }
+}
+
+@media (max-width: 380px) {
+  .floating-icon.eraser, .floating-icon.pencil { display: none; }
+  .hero h2 { font-size: 1.4rem; }
 }

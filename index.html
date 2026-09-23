@@ -41,21 +41,35 @@
     <div class="bank-grid">
       <div class="bank-field full">
         <label>Beneficiary</label>
-        <div class="value">Resala Association for Charitable Works (Registered Charity No. 444)</div>
+        <div class="field-row">
+          <div class="value" data-copy="Resala Association for Charitable Works (Registered Charity No. 444)">Resala Association for Charitable Works (Registered Charity No. 444)</div>
+          <button class="copy-btn" type="button">Copy</button>
+        </div>
       </div>
       <div class="bank-field full">
         <label>Bank Name</label>
-        <div class="value">Kuwait Finance House Bank – Egypt</div>
+        <div class="field-row">
+          <div class="value" data-copy="Kuwait Finance House Bank – Egypt">Kuwait Finance House Bank – Egypt</div>
+          <button class="copy-btn" type="button">Copy</button>
+        </div>
       </div>
       <div class="bank-field">
         <label>Account Number</label>
-        <div class="value">0016194500031</div>
+        <div class="field-row">
+          <div class="value" data-copy="0016194500031">0016194500031</div>
+          <button class="copy-btn" type="button">Copy</button>
+        </div>
       </div>
       <div class="bank-field">
         <label>IBAN</label>
-        <div class="value">EG730020001600000016194500031</div>
+        <div class="field-row">
+          <div class="value" data-copy="EG730020001600000016194500031">EG730020001600000016194500031</div>
+          <button class="copy-btn" type="button">Copy</button>
+        </div>
       </div>
     </div>
+
+    <button class="copy-all-btn" type="button" id="copyAllBtn">📋 Copy All Details</button>
   </div>
 
   <div class="supplies-strip">
@@ -86,5 +100,6 @@
   Thank you for supporting <strong>Resala AUC</strong> — every donation changes a life.
 </footer>
 
+<script src="app.js"></script>
 </body>
 </html>
