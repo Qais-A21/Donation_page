@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resala AUC — Winter Warmth Donation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="winter-campaign-design.css">
+<link rel="icon" href="assets/logo.jpeg" type="image/jpeg">
+</head>
+<body>
+
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <img class="logo" src="assets/logo.jpeg" alt="Resala AUC logo">
+  <div>
+    <h1>Resala AUC</h1>
+    <p>Winter Warmth Campaign ❄</p>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-icons">
+    <img class="floating-icon coat" src="assets/icon-coat.svg" alt="">
+    <img class="floating-icon beanie" src="assets/icon-beanie.svg" alt="">
+    <img class="floating-icon scarf" src="assets/icon-scarf.svg" alt="">
+    <img class="floating-icon mitten" src="assets/icon-mitten.svg" alt="">
+  </div>
+
+  <h2>Give a Child a Warm Winter</h2>
+  <p class="lead">
+    Your donation helps Resala AUC provide coats, scarves, beanies, mittens,
+    and blankets to children who need them most. Every contribution — big or small —
+    helps a child stay warm, healthy, and smiling all winter long.
+  </p>
+  <span class="badge">100% of donations go to winter essentials</span>
+  <div class="snowcap" aria-hidden="true"></div>
+</section>
+
+<main>
+  <div class="card">
+    <h3>Bank Transfer Details</h3>
+    <div class="bank-grid">
+      <div class="bank-field full">
+        <label>Beneficiary</label>
+        <div class="value">Resala Association for Charitable Works (Registered Charity No. 444)</div>
+      </div>
+      <div class="bank-field full">
+        <label>Bank Name</label>
+        <div class="value">Kuwait Finance House Bank – Egypt</div>
+      </div>
+      <div class="bank-field">
+        <label>Account Number</label>
+        <div class="field-row">
+          <div class="value" data-copy="0016194500031">0016194500031</div>
+          <button class="copy-btn" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="bank-field">
+        <label>IBAN</label>
+        <div class="field-row">
+          <div class="value" data-copy="EG730020001600000016194500031">EG730020001600000016194500031</div>
+          <button class="copy-btn" type="button">Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="supplies-strip">
+    <figure><img src="assets/icon-coat.svg" alt="Coat"><figcaption>Coats</figcaption></figure>
+    <figure><img src="assets/icon-scarf.svg" alt="Scarf"><figcaption>Scarves</figcaption></figure>
+    <figure><img src="assets/icon-beanie.svg" alt="Beanie"><figcaption>Beanies</figcaption></figure>
+    <figure><img src="assets/icon-mitten.svg" alt="Mitten"><figcaption>Mittens</figcaption></figure>
+    <figure><img src="assets/icon-blanket.svg" alt="Blanket"><figcaption>Blankets</figcaption></figure>
+  </div>
+</main>
+
+<footer>
+  Thank you for supporting <strong>Resala AUC</strong> — every donation brings warmth to a child.
+</footer>
+
+<script src="app.js"></script>
+<script src="winter-snow.js"></script>
+</body>
+</html>
